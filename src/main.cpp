@@ -8,7 +8,7 @@ const char* password =  "ggeznore";
   
 AsyncWebServer server(80);
   
-int fuelPin = 12;
+int fuelPin = 15;
 int oxygenPin = 13;
 int ignitionPin; //TODO: connect ignition
   
@@ -126,4 +126,7 @@ void setup(){
   server.begin();
 }
   
-void loop(){}
+void loop(){
+  Serial.println(WiFi.localIP());
+  delay(1000);
+}
